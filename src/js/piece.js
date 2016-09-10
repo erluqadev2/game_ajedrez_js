@@ -1,18 +1,22 @@
-var piece = function(){
+var Piece = function(){
 
-    var TYPES_PIECES = {
-        PEON : 'PEON',
-        ALFIL : 'ALFIL',
-        CABALLO : 'CABALLO',
-        TORRE : 'TORRE',
-        REY : 'REY',
-        REINA : 'REINA'
-    }
-
+    //private
     var typePiece = null;
-    
+    var colorPiece = null;
+    var initPosition = {};
+    var currentPosition = {};
+
+    //public
+    var getInitPosition = function(){
+        return initPosition;
+    };
+
+    var getCurrentPosition = function(){
+        return currentPosition;
+    };
 
     return {
-
+        getInitPosition     : getInitPosition,
+        getCurrentPosition  : getCurrentPosition
     };
 };
