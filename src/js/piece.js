@@ -1,22 +1,24 @@
-var Piece = function(){
-
+var Piece = function(typePiece,colorPiece, initPosition){
     //private
-    var typePiece = null;
-    var colorPiece = null;
-    var initPosition = {};
-    var currentPosition = {};
-
-    //public
-    var getInitPosition = function(){
-        return initPosition;
-    };
-
-    var getCurrentPosition = function(){
-        return currentPosition;
-    };
-
-    return {
-        getInitPosition     : getInitPosition,
-        getCurrentPosition  : getCurrentPosition
-    };
+    this.typePiece = typePiece;
+    this.colorPiece = colorPiece;
+    this.initPosition = initPosition;
+    this.currentPosition = initPosition;
 };
+
+Piece.prototype.getTypePiece = function(){
+    return this.typePiece;
+};
+Piece.prototype.getColorPiece = function(){
+    return this.colorPiece;
+};
+Piece.prototype.getCurrentPosition = function(){
+    return this.currentPosition;
+};
+Piece.prototype.getTipeMoves = function(){
+    return MOVES_PIECES[this.typePiece];
+};
+Piece.prototype.reset = function(){
+    this.currentPosition = this.initPosition;
+};
+
