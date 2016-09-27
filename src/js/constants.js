@@ -22,6 +22,10 @@ var MOVES = {
 };
 var NUMBER_PLAYERS = 2;
 var NUMBER_PIECES_PER_PLAYER = 16;
+var NUMBER_ROWS = 8;
+var NUMBER_COLUMS = 8;
+var ARRAY_NUMBERS_ROWS = [1,2,3,4,5,6,7,8];
+var ARRAY_LETTERS_COLUMNS = ['A','B','C','D','E','F','G','H'];
 
 var MOVES_PIECES = {
     TYPES_PIECES.PEON : [
